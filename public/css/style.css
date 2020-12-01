@@ -1,6 +1,5 @@
 body {
   background-color: lightblue;
-  color: rgb(143, 29, 158);
 }
 
 h1 {
@@ -12,6 +11,3 @@ h3 {
   margin-top: 4px;
 }
 
-p {
-  line-height: 0;
-}
