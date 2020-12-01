@@ -46,10 +46,14 @@
    [:center
     [:h1 "Dijkstra's Algorithm"]
     [:p (str g)]
-    [:p (str @graph-db)]
+    [:p (str (:nodes @graph-db))]
+    [:p (str "Unvisited: " (:unvisited @graph-db))]
+    [:p (str "Current node: " (:current-node @graph-db))]
     [:button
      {:on-click
       (fn step-click [e]
+        (run! #(update-node! % g) (keys ((:current-node @graph-db) g)))
+        (mark-visited!)
         (swap! step inc))}
      "Next"]
     [:button
