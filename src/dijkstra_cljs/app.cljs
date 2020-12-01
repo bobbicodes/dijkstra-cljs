@@ -3,6 +3,9 @@
 
 (defonce step (r/atom 0))
 
+; Graphs are represented as maps with nodes as keys,
+; each mapped to a map of its neighbors to their costs.
+
 (def demo-graph
   {:red    {:green 10, :blue   5, :orange 8}
    :green  {:red 10,   :blue   3}
@@ -29,6 +32,37 @@
    :j {:i 6 :l 4 :k 4}
    :k {:i 4 :j 4 :e 5}
    :l {:c 2 :i 4 :j 4}})
+
+(defn rand-weight
+  "Generates a random integer from 1 to n."
+  [n]
+  (max 1 (rand-int n)))
+
+(defn nodes
+  "Generates a list of n nodes as integer keywords."
+  [n]
+  (map #(keyword (str %)) (range 1 (inc n))))
+
+(defn rand-edges
+  "Generates a random list of possible edges for a node,
+   given a list of nodes."
+  [nodes]
+  (take (rand-int (count nodes)) (shuffle nodes)))
+
+(comment
+  (rand-edges (nodes 6)))
+
+(defn assign-weights [edges]
+  (zipmap
+   edges
+   (repeatedly #(rand-weight 9))))
+
+(defn rand-graph [n s]
+  (zipmap
+   (nodes n)
+   (map assign-weights (repeatedly n #(rand-edges (nodes n))))))
+
+(rand-graph 6 5)
 
 (defonce graph (r/atom computerphile))
 (defonce starting-node (r/atom :s))
@@ -63,6 +97,16 @@
   (swap! graph-db assoc :unvisited (disj (:unvisited @graph-db) (:current-node @graph-db)))
   (swap! graph-db assoc :current-node (next-node @graph-db)))
 
+(defonce rand-nodes (r/atom 6))
+
+(defn rand-nodes-input []
+    [:div
+     [:p "Nodes: "
+      [:input {:type "number"
+               :style {:width 30}
+               :value @rand-nodes
+               :on-change #(reset! rand-nodes (-> % .-target .-value))}]]])
+
 (defn app []
   [:div#app
    [:center
@@ -84,7 +128,13 @@
         (reset! step 0)
         (init-graph! @graph @starting-node))}
      "Reset"]
-    [:p (str "Step " @step)]]])
+    [:p (str "Step " @step)]
+    [:button
+     {:on-click
+      (fn step-click [e]
+        (swap! graph (rand-graph @rand-nodes @rand-nodes)))}
+     "Random graph"]
+[rand-nodes-input]]])
 
 (defn render []
   (r/render [app]

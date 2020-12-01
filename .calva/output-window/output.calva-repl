@@ -47,3 +47,57 @@ clj::dijkstra-cljs.app=>
 clj::dijkstra-cljs.app=> 
 nil
 clj::dijkstra-cljs.app=> 
+{:1 {:2 2, :3 1}, :2 {}, :3 {:2 8, :4 4, :3 6, :5 3, :1 1}, :4 {:1 7, :4 2}, :5 {}, :6 {}}
+clj::dijkstra-cljs.app=> 
+(:6 :1 :4)
+clj::dijkstra-cljs.app=> 
+
+; Error: Assert failed: (number? n)
+;     at Function.eval [as cljs$core$IFn$_invoke$arity$2] (http://localhost:8080/js/cljs-runtime/cljs.core.js:17855:8)
+    at Function.eval [as cljs$core$IFn$_invoke$arity$2] (http://localhost:8080/js/cljs-runtime/cljs.core.js:18686:23)
+    at dijkstra_cljs$app$rand_graph (dijkstra_cljs/app.cljs:40:150)
+    at eval (eval at shadow$cljs$devtools$client$browser$global_eval (http://localhost:8080/js/cljs-runtime/shadow.cljs.devtools.client.browser.js), <anonymous>:1:30)
+    at eval (<anonymous>)
+    at Object.shadow$cljs$devtools$client$browser$global_eval [as global_eval] (http://localhost:8080/js/cljs-runtime/shadow.cljs.devtools.client.browser.js:758:16)
+    at eval (http://localhost:8080/js/cljs-runtime/shadow.cljs.devtools.client.browser.js:767:44)
+    at Object.shadow$cljs$devtools$client$env$repl_call [as repl_call] (http://localhost:8080/js/cljs-runtime/shadow.cljs.devtools.client.env.js:175:108)
+    at Object.shadow$cljs$devtools$client$browser$repl_invoke [as repl_invoke] (http://localhost:8080/js/cljs-runtime/shadow.cljs.devtools.client.browser.js:766:46)
+    at shadow$cljs$devtools$client$browser$handle_message (http://localhost:8080/js/cljs-runtime/shadow.cljs.devtools.client.browser.js:844:37)
+clj::dijkstra-cljs.app=> 
+
+; Error: Assert failed: (number? n)
+;     at Function.eval [as cljs$core$IFn$_invoke$arity$2] (http://localhost:8080/js/cljs-runtime/cljs.core.js:17855:8)
+    at Function.eval [as cljs$core$IFn$_invoke$arity$2] (http://localhost:8080/js/cljs-runtime/cljs.core.js:18686:23)
+    at dijkstra_cljs$app$rand_graph (dijkstra_cljs/app.cljs:40:150)
+    at eval (eval at shadow$cljs$devtools$client$browser$global_eval (http://localhost:8080/js/cljs-runtime/shadow.cljs.devtools.client.browser.js), <anonymous>:1:30)
+    at eval (<anonymous>)
+    at Object.shadow$cljs$devtools$client$browser$global_eval [as global_eval] (http://localhost:8080/js/cljs-runtime/shadow.cljs.devtools.client.browser.js:758:16)
+    at eval (http://localhost:8080/js/cljs-runtime/shadow.cljs.devtools.client.browser.js:767:44)
+    at Object.shadow$cljs$devtools$client$env$repl_call [as repl_call] (http://localhost:8080/js/cljs-runtime/shadow.cljs.devtools.client.env.js:175:108)
+    at Object.shadow$cljs$devtools$client$browser$repl_invoke [as repl_invoke] (http://localhost:8080/js/cljs-runtime/shadow.cljs.devtools.client.browser.js:766:46)
+    at shadow$cljs$devtools$client$browser$handle_message (http://localhost:8080/js/cljs-runtime/shadow.cljs.devtools.client.browser.js:844:37)
+clj::dijkstra-cljs.app=> 
+{:1 {:1 4, :2 3, :5 5, :6 1}, :2 {:3 6, :6 4}, :3 {:6 7, :5 1, :3 6, :1 5, :4 6}, :4 {:6 4}, :5 {:1 7, :6 7, :5 2, :4 3}, :6 {:4 7, :2 6}}
+clj::dijkstra-cljs.app=> 
+{:1 {:2 1, :1 4, :4 8}, :2 {:6 1, :4 4, :3 2, :1 3}, :3 {}, :4 {:6 1}, :5 {:2 1, :4 1, :5 2}, :6 {:3 2, :4 1, :2 7, :6 2, :5 1}}
+clj::dijkstra-cljs.app=> 
+{:1 {:2 1}, :2 {:2 4, :1 8, :3 3}, :3 {:6 3, :4 5}, :4 {:4 2}, :5 {:1 5, :6 6, :5 2, :2 6}, :6 {:1 4, :5 6}}
+clj::dijkstra-cljs.app=> 
+{:1 {:1 1, :2 8}, :2 {:2 4, :5 1, :1 5}, :3 {:5 7, :6 8, :3 4, :2 5}, :4 {:2 2}, :5 {:6 1}, :6 {:2 1, :4 7, :5 6}}
+clj::dijkstra-cljs.app=> 
+{:1 {:1 5, :4 7}, :2 {:4 7, :5 2, :6 6, :3 1}, :3 {:3 3, :6 1}, :4 {:2 6, :3 6, :1 1, :5 5, :4 1}, :5 {}, :6 {:1 8, :5 2, :3 1}}
+clj::dijkstra-cljs.app=> 
+{:1 {:6 8, :1 7}, :2 {:2 4, :1 8, :3 7, :6 1, :5 6}, :3 {:3 1, :1 6, :4 1, :5 2}, :4 {:2 1}, :5 {}, :6 {:6 1, :4 2, :1 7, :3 8, :5 1}}
+clj::dijkstra-cljs.app=> 
+{:1 {:6 8, :4 1}, :2 {:3 2, :4 2, :5 5}, :3 {:4 1, :6 6}, :4 {:4 4, :6 3, :1 4, :2 2, :3 7}, :5 {:4 8, :2 8, :1 8, :3 4}, :6 {:3 3}}
+clj::dijkstra-cljs.app=> 
+{:1 {:1 5}, :2 {:2 7}, :3 {:2 6}, :4 {:6 8, :2 2, :1 6, :4 7, :3 5}, :5 {:5 8, :1 7, :3 7, :6 1}, :6 {:4 1, :2 2, :6 4, :5 8}}
+clj::dijkstra-cljs.app=> 
+{:1 {:3 3, :1 8, :4 3, :6 1}, :2 {:4 4, :5 5}, :3 {:4 3, :5 4, :1 1}, :4 {}, :5 {:2 5, :3 1, :1 1, :4 1}, :6 {:4 3}}
+clj::dijkstra-cljs.app=> 
+{:1 {}, :2 {:6 4, :4 1}, :3 {:6 5, :3 1, :5 1, :2 5, :4 3}, :4 {}, :5 {:4 3, :1 2, :3 1, :5 1, :2 5}, :6 {:5 2, :6 1, :1 5, :3 2}}
+clj::dijkstra-cljs.app=> 
+{:1 {:5 2, :2 1, :6 3, :3 3}, :2 {:3 1, :5 1, :6 2, :2 4, :1 6}, :3 {:4 3, :1 2, :2 4, :5 1}, :4 {:1 8, :6 8, :2 3, :3 4, :5 6}, :5 {:3 8, :4 4}, :6 {:4 3, :2 8}}
+clj::dijkstra-cljs.app=> 
+{:1 {:6 5, :1 2}, :2 {:2 2, :3 1}, :3 {:3 1, :5 2, :2 1, :1 8}, :4 {:6 2, :4 6, :2 1}, :5 {}, :6 {:4 1}}
+clj::dijkstra-cljs.app=> 
