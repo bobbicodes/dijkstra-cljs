@@ -1,4 +1,9 @@
 (ns dijkstra-cljs.app
+  "Many beautiful implementations of Dijkstra's shortest path algorithm
+   exist in Clojure, from the very performant to the most elegant and concise.
+   This version is meant to be a learning tool that runs in the browser,
+   tracking the operations in a central graph-db Reagent atom,
+   allowing the user to step through the operations and build intuition."
   (:require [reagent.core :as r]))
 
 (defonce step (r/atom 0))
@@ -33,15 +38,17 @@
    :k {:i 4 :j 4 :e 5}
    :l {:c 2 :i 4 :j 4}})
 
-(defn rand-weight
-  "Generates a random integer from 1 to n."
-  [n]
-  (max 1 (rand-int n)))
+(show! {:1 {:2 1 :3 2}
+        :2 {:4 4}
+        :3 {:4 2}
+        :4 {}})
 
 (defn nodes
   "Generates a list of n nodes as integer keywords."
   [n]
   (map #(keyword (str %)) (range 1 (inc n))))
+
+(nodes 6)
 
 (defn rand-edges
   "Generates a random list of possible edges for a node,
@@ -52,10 +59,10 @@
 (comment
   (rand-edges (nodes 6)))
 
-(defn assign-weights [edges]
+(defn assign-weights [edges n]
   (zipmap
    edges
-   (repeatedly #(rand-weight 9))))
+   (repeatedly #(inc (rand-int n)) 9)))
 
 (defn rand-graph [n s]
   (zipmap
