@@ -1,9 +1,9 @@
 (ns dijkstra-cljs.app
   "Many beautiful implementations of Dijkstra's shortest path algorithm
    exist in Clojure, from the very performant to the most elegant and concise.
-   This version is meant to be a learning tool that runs in the browser,
-   tracking the operations in a central graph-db Reagent atom,
-   allowing the user to step through the operations and build intuition."
+   This one is designed to be a learning tool that runs in the browser,
+   tracking the operations in a central Reagent atom called `graph-db`,
+   allowing the user to step through them and build intuition."
   (:require [reagent.core :as r]))
 
 (defonce step (r/atom 0))
@@ -38,17 +38,10 @@
    :k {:i 4 :j 4 :e 5}
    :l {:c 2 :i 4 :j 4}})
 
-(show! {:1 {:2 1 :3 2}
-        :2 {:4 4}
-        :3 {:4 2}
-        :4 {}})
-
 (defn nodes
   "Generates a list of n nodes as integer keywords."
   [n]
   (map #(keyword (str %)) (range 1 (inc n))))
-
-(nodes 6)
 
 (defn rand-edges
   "Generates a random list of possible edges for a node,
@@ -69,16 +62,14 @@
    (nodes n)
    (map assign-weights (repeatedly n #(rand-edges (nodes n))))))
 
-(rand-graph 6 5)
+;(rand-graph 6 5)
 
 (defonce graph (r/atom computerphile))
 (defonce starting-node (r/atom :s))
 (defonce graph-db (r/atom {}))
 
 (defn init-graph! [graph initial-node]
-  (swap! graph-db assoc :nodes (zipmap (keys graph)
-                                       (repeat {:distance 99999999
-                                                :parent nil})))
+  (swap! graph-db assoc :nodes (zipmap (keys graph) (repeat {:distance 99999999 :parent nil})))
   (swap! graph-db assoc :unvisited (set (keys graph)))
   (swap! graph-db assoc-in [:nodes initial-node :distance] 0)
   (swap! graph-db assoc :current-node initial-node))
@@ -136,12 +127,13 @@
         (init-graph! @graph @starting-node))}
      "Reset"]
     [:p (str "Step " @step)]
-    [:button
+    #_[:button
      {:on-click
       (fn step-click [e]
         (swap! graph (rand-graph @rand-nodes @rand-nodes)))}
      "Random graph"]
-[rand-nodes-input]]])
+;[rand-nodes-input]
+    ]])
 
 (defn render []
   (r/render [app]
