@@ -1088,3 +1088,136 @@ clj::dijkstra-cljs.viz=>
 {:1 {:4 5}, :2 {:5 1, :4 9}, :3 {}, :4 {}, :5 {:4 7}, :6 {:5 7, :1 2}}
 nil
 clj::dijkstra-cljs.viz=> 
+; Syntax error compiling at (c:\Users\admin\dijkstra-cljs\src\dijkstra_cljs\viz.clj:0:0).
+; Unable to resolve symbol: disconnected-graph in this context
+clojure.lang.Compiler/analyze (Compiler.java:6808)
+clojure.lang.Compiler/eval (Compiler.java:7181)
+clojure.core/eval (core.clj:3214)
+clojure.core/eval (core.clj:3210)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:91)
+clojure.main/repl (main.clj:437)
+clojure.main/repl (main.clj:458)
+clojure.main/repl (main.clj:368)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:84)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:56)
+nrepl.middleware.interruptible-eval/interruptible-eval (interruptible_eval.clj:155)
+nrepl.middleware.session/session-exec (session.clj:190)
+nrepl.middleware.session/session-exec (session.clj:189)
+java.lang.Thread/run (Thread.java:834)
+clj::dijkstra-cljs.viz=> 
+#'dijkstra-cljs.viz/disconnected-graph
+clj::dijkstra-cljs.viz=> 
+{:1 {:4 5}, :2 {:5 1, :4 9}, :3 {}, :4 {}, :5 {:4 7}, :6 {:5 7, :1 2}}
+clj::dijkstra-cljs.viz=> 
+; Error printing return value (ArityException) at clojure.lang.AFn/throwArity (AFn.java:429).
+; Wrong number of args (1) passed to: dijkstra-cljs.viz/eval35523/fn--35524
+clojure.main/repl (main.clj:442)
+clojure.main/repl (main.clj:458)
+clojure.main/repl (main.clj:368)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:84)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:56)
+nrepl.middleware.interruptible-eval/interruptible-eval (interruptible_eval.clj:155)
+nrepl.middleware.session/session-exec (session.clj:190)
+nrepl.middleware.session/session-exec (session.clj:189)
+java.lang.Thread/run (Thread.java:834)
+clj::dijkstra-cljs.viz=> 
+; Error printing return value (ArityException) at clojure.lang.AFn/throwArity (AFn.java:429).
+; Wrong number of args (1) passed to: dijkstra-cljs.viz/eval35527/fn--35528
+clojure.main/repl (main.clj:442)
+clojure.main/repl (main.clj:458)
+clojure.main/repl (main.clj:368)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:84)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:56)
+nrepl.middleware.interruptible-eval/interruptible-eval (interruptible_eval.clj:155)
+nrepl.middleware.session/session-exec (session.clj:190)
+nrepl.middleware.session/session-exec (session.clj:189)
+java.lang.Thread/run (Thread.java:834)
+clj::dijkstra-cljs.viz=> 
+([:1 {:4 5}] [:2 {:5 1, :4 9}] [:3 {}] [:4 {}] [:5 {:4 7}] [:6 {:5 7, :1 2}])
+clj::dijkstra-cljs.viz=> 
+([:3 {}] [:4 {}])
+clj::dijkstra-cljs.viz=> 
+(:3 :4)
+clj::dijkstra-cljs.viz=> 
+false
+clj::dijkstra-cljs.viz=> 
+false
+clj::dijkstra-cljs.viz=> 
+#function[clojure.core/filter/fn--5889]
+clj::dijkstra-cljs.viz=> 
+; Error printing return value (IllegalArgumentException) at clojure.lang.RT/seqFrom (RT.java:557).
+; Don't know how to create ISeq from: clojure.lang.Keyword
+clojure.main/repl (main.clj:442)
+clojure.main/repl (main.clj:458)
+clojure.main/repl (main.clj:368)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:84)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:56)
+nrepl.middleware.interruptible-eval/interruptible-eval (interruptible_eval.clj:155)
+nrepl.middleware.session/session-exec (session.clj:190)
+nrepl.middleware.session/session-exec (session.clj:189)
+java.lang.Thread/run (Thread.java:834)
+clj::dijkstra-cljs.viz=> 
+; Error printing return value (ArityException) at clojure.lang.AFn/throwArity (AFn.java:429).
+; Wrong number of args (1) passed to: clojure.core/contains?
+clojure.main/repl (main.clj:442)
+clojure.main/repl (main.clj:458)
+clojure.main/repl (main.clj:368)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:84)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:56)
+nrepl.middleware.interruptible-eval/interruptible-eval (interruptible_eval.clj:155)
+nrepl.middleware.session/session-exec (session.clj:190)
+nrepl.middleware.session/session-exec (session.clj:189)
+java.lang.Thread/run (Thread.java:834)
+clj::dijkstra-cljs.viz=> 
+#function[clojure.core/filter/fn--5889]
+clj::dijkstra-cljs.viz=> 
+#function[clojure.core/filter/fn--5889]
+clj::dijkstra-cljs.viz=> 
+#function[clojure.core/filter/fn--5889]
+clj::dijkstra-cljs.viz=> 
+#function[dijkstra-cljs.viz/eval35596/fn--35597]
+clj::dijkstra-cljs.viz=> 
+()
+clj::dijkstra-cljs.viz=> 
+(:1 :2 :5)
+clj::dijkstra-cljs.viz=> 
+true
+clj::dijkstra-cljs.viz=> 
+(:1 :2 :5)
+clj::dijkstra-cljs.viz=> 
+nil
+clj::dijkstra-cljs.viz=> 
+#'dijkstra-cljs.viz/connected?
+clj::dijkstra-cljs.viz=> 
+(nil (:1 :2 :5))
+clj::dijkstra-cljs.viz=> 
+#'dijkstra-cljs.viz/connected?
+clj::dijkstra-cljs.viz=> 
+false
+clj::dijkstra-cljs.viz=> 
+#'dijkstra-cljs.viz/connected?
+clj::dijkstra-cljs.viz=> 
+false
+clj::dijkstra-cljs.viz=> 
+{:1 {}, :2 {:5 7, :6 9}, :3 {}, :4 {}, :5 {}, :6 {}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {:3 7}, :2 {}, :3 {}, :4 {:3 1}, :5 {:3 2, :4 5, :6 4}, :6 {:2 9}}
+nil
+clj::dijkstra-cljs.viz=> 
+#'dijkstra-cljs.viz/connected-graph
+clj::dijkstra-cljs.viz=> 
+false
+clj::dijkstra-cljs.viz=> 
+#'dijkstra-cljs.viz/connected?
+clj::dijkstra-cljs.viz=> 
+true
+clj::dijkstra-cljs.viz=> 
+false
+clj::dijkstra-cljs.viz=> 
+#'dijkstra-cljs.viz/connected?
+clj::dijkstra-cljs.viz=> 
+false
+clj::dijkstra-cljs.viz=> 
+true
+clj::dijkstra-cljs.viz=> 

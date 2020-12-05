@@ -63,9 +63,6 @@
 
 (show! (rand-graph 6 6))
 
-(def disconnected-graph
-  {:1 {:4 5}, :2 {:5 1, :4 9}, :3 {}, :4 {}, :5 {:4 7}, :6 {:5 7, :1 2}})
-
 ; So, let's make a function that takes a node and a graph
 ; and outputs this list.
 
@@ -91,6 +88,22 @@
  (nth (iterate add-random-node (zipmap (nodes 6) (repeat {}))) 2)
  (show!))
 
-(show! g)
+; The graph could still be disconnected:
 
-(Math/sqrt .57)
+(def connected-graph
+  {:1 {:3 7}, :2 {}, :3 {}, :4 {:3 1}, :5 {:3 2, :4 5, :6 4}, :6 {:2 9}})
+
+(def disconnected-graph
+  {:1 {:4 5}, :2 {:5 1, :4 9}, :3 {}, :4 {}, :5 {:4 7}, :6 {:5 7, :1 2}})
+
+; to determine that this graph is not connected, we need to know that
+; node :3 is both empty, and that no other nodes contain :3.
+
+(seq (filter #(contains? (% disconnected-graph) :3) (keys disconnected-graph)))
+
+(defn connected? [graph]
+  (every? seq (for [node (map first (filter #(= {} (val %)) disconnected-graph))]
+                  (filter #(contains? (% graph) node) (keys graph)))))
+
+(connected? disconnected-graph)
+(connected? connected-graph)
