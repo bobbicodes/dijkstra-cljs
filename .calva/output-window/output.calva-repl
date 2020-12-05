@@ -796,3 +796,295 @@ clj::dijkstra-cljs.viz=>
 {:1 {}, :2 {}, :3 {}, :4 {:2 5}, :5 {}, :6 {}}
 nil
 clj::dijkstra-cljs.viz=> 
+#'dijkstra-cljs.viz/add-random-node
+clj::dijkstra-cljs.viz=> 
+{:1 {}, :2 {}, :3 {:4 5}, :4 {}, :5 {}, :6 {:5 5}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {:5 7}, :2 {}, :3 {}, :4 {}, :5 {}, :6 {:5 6}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {}, :2 {:5 8}, :3 {:5 9}, :4 {}, :5 {}, :6 {}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {:5 4}, :2 {}, :3 {}, :4 {:5 5}, :5 {}, :6 {}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {}, :2 {:4 7}, :3 {}, :4 {}, :5 {}, :6 {:3 4}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {:6 4, :3 9}, :2 {}, :3 {}, :4 {}, :5 {}, :6 {}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {}, :2 {}, :3 {}, :4 {:3 6}, :5 {}, :6 {:2 6}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {}, :2 {:1 3, :4 8}, :3 {}, :4 {}, :5 {}, :6 {}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {}, :2 {:6 2, :4 2}, :3 {}, :4 {}, :5 {}, :6 {}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {}, :2 {}, :3 {:4 5, :5 1}, :4 {}, :5 {}, :6 {}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {:6 9}, :2 {}, :3 {}, :4 {}, :5 {:3 4}, :6 {}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {:5 2}, :2 {}, :3 {:1 7}, :4 {}, :5 {}, :6 {}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {}, :2 {:4 2}, :3 {}, :4 {}, :5 {:3 7}, :6 {}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {}, :2 {:5 5}, :3 {}, :4 {:1 3}, :5 {}, :6 {}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {}, :2 {}, :3 {}, :4 {}, :5 {:3 3}, :6 {:4 3}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {}, :2 {}, :3 {}, :4 {}, :5 {:6 3, :3 5}, :6 {}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {}, :2 {:4 5}, :3 {}, :4 {}, :5 {:6 8}, :6 {}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {:4 1}, :2 {:5 1}, :3 {}, :4 {}, :5 {}, :6 {}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {}, :2 {:5 8}, :3 {}, :4 {:3 4}, :5 {}, :6 {}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {}, :2 {}, :3 {:1 9}, :4 {}, :5 {:3 3}, :6 {}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {}, :2 {}, :3 {:4 5}, :4 {:6 1}, :5 {}, :6 {}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {}, :2 {}, :3 {:4 1}, :4 {:1 4}, :5 {}, :6 {}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {}, :2 {}, :3 {}, :4 {}, :5 {:1 7}, :6 {:5 8}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {}, :2 {}, :3 {}, :4 {:3 1}, :5 {:1 1}, :6 {}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {}, :2 {:6 1}, :3 {}, :4 {}, :5 {}, :6 {:4 1}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {}, :2 {:3 5}, :3 {}, :4 {}, :5 {}, :6 {:1 8}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {}, :2 {:3 2}, :3 {}, :4 {:3 7}, :5 {}, :6 {}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {}, :2 {}, :3 {}, :4 {:6 6}, :5 {:6 3}, :6 {}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {}, :2 {}, :3 {}, :4 {}, :5 {:1 8, :3 9}, :6 {}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {}, :2 {:6 7}, :3 {}, :4 {:2 2}, :5 {}, :6 {}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {:3 2}, :2 {}, :3 {}, :4 {}, :5 {:1 9}, :6 {}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {:5 1}, :2 {:6 4}, :3 {}, :4 {}, :5 {}, :6 {}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {}, :2 {}, :3 {:2 9}, :4 {}, :5 {}, :6 {:4 6}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {:4 2}, :2 {:4 1}, :3 {}, :4 {}, :5 {}, :6 {}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {}, :2 {}, :3 {}, :4 {:5 7}, :5 {}, :6 {:1 9}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {:2 8}, :2 {}, :3 {:1 6}, :4 {}, :5 {}, :6 {}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {:3 6}, :2 {:6 4}, :3 {}, :4 {}, :5 {}, :6 {}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {:3 2}, :2 {}, :3 {:4 4}, :4 {}, :5 {}, :6 {}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {}, :2 {}, :3 {}, :4 {}, :5 {:1 8, :4 6}, :6 {}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {:3 9}, :2 {}, :3 {}, :4 {}, :5 {}, :6 {:5 3}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {:4 8}, :2 {}, :3 {}, :4 {}, :5 {:6 7}, :6 {}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {}, :2 {:3 1}, :3 {}, :4 {:1 9}, :5 {}, :6 {}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {}, :2 {:6 5}, :3 {}, :4 {}, :5 {}, :6 {:3 2}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {:3 5}, :2 {:1 2}, :3 {}, :4 {}, :5 {}, :6 {}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {}, :2 {:1 3}, :3 {}, :4 {}, :5 {:6 5}, :6 {}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {:6 4}, :2 {}, :3 {}, :4 {:5 2}, :5 {}, :6 {}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {}, :2 {:4 6}, :3 {:4 2}, :4 {}, :5 {}, :6 {}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {:5 7, :4 2}, :2 {}, :3 {}, :4 {}, :5 {}, :6 {}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {:5 9}, :2 {}, :3 {}, :4 {}, :5 {}, :6 {}}
+nil
+clj::dijkstra-cljs.viz=> 
+#'dijkstra-cljs.viz/add-random-node
+clj::dijkstra-cljs.viz=> 
+{:1 {}, :2 {}, :3 {}, :4 {}, :5 {:3 2}, :6 {:1 2}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {:3 3}, :2 {:1 8}, :3 {}, :4 {}, :5 {}, :6 {}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {}, :2 {:3 9}, :3 {}, :4 {}, :5 {}, :6 {:5 9}}
+nil
+clj::dijkstra-cljs.viz=> 
+(#function[clojure.core/vals]
+ #function[clojure.core/vals]
+ #function[clojure.core/vals]
+ #function[clojure.core/vals]
+ #function[clojure.core/vals]
+ #function[clojure.core/vals])
+clj::dijkstra-cljs.viz=> 
+(#function[clojure.core/vals]
+ #function[clojure.core/vals]
+ #function[clojure.core/vals]
+ #function[clojure.core/vals]
+ #function[clojure.core/vals]
+ #function[clojure.core/vals])
+clj::dijkstra-cljs.viz=> 
+; Error printing return value (ClassCastException) at clojure.lang.APersistentMap$ValSeq/first (APersistentMap.java:236).
+; class clojure.lang.Keyword cannot be cast to class java.util.Map$Entry (clojure.lang.Keyword is in unnamed module of loader 'app'; java.util.Map$Entry is in module java.base of loader 'bootstrap')
+clojure.main/repl (main.clj:442)
+clojure.main/repl (main.clj:458)
+clojure.main/repl (main.clj:368)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:84)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:56)
+nrepl.middleware.interruptible-eval/interruptible-eval (interruptible_eval.clj:155)
+nrepl.middleware.session/session-exec (session.clj:190)
+nrepl.middleware.session/session-exec (session.clj:189)
+java.lang.Thread/run (Thread.java:834)
+clj::dijkstra-cljs.viz=> 
+#'dijkstra-cljs.viz/m
+clj::dijkstra-cljs.viz=> 
+([:1 {}] [:2 {}] [:3 {:4 2}] [:4 {:3 5}] [:5 {}] [:6 {}])
+clj::dijkstra-cljs.viz=> 
+({} {} {:4 2} {:3 5} {} {})
+clj::dijkstra-cljs.viz=> 
+##NaN
+clj::dijkstra-cljs.viz=> 
+({} {} {:4 2} {:3 5} {} {})
+clj::dijkstra-cljs.viz=> 
+; Error printing return value (ClassCastException) at clojure.lang.APersistentMap$ValSeq/first (APersistentMap.java:236).
+; class clojure.lang.Keyword cannot be cast to class java.util.Map$Entry (clojure.lang.Keyword is in unnamed module of loader 'app'; java.util.Map$Entry is in module java.base of loader 'bootstrap')
+clojure.main/repl (main.clj:442)
+clojure.main/repl (main.clj:458)
+clojure.main/repl (main.clj:368)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:84)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:56)
+nrepl.middleware.interruptible-eval/interruptible-eval (interruptible_eval.clj:155)
+nrepl.middleware.session/session-exec (session.clj:190)
+nrepl.middleware.session/session-exec (session.clj:189)
+java.lang.Thread/run (Thread.java:834)
+clj::dijkstra-cljs.viz=> 
+; Syntax error reading source at (REPL:53:43).
+; Duplicate key: :3
+clojure.main/repl (main.clj:433)
+clojure.main/repl (main.clj:432)
+clojure.main/repl (main.clj:458)
+clojure.main/repl (main.clj:368)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:84)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:56)
+nrepl.middleware.interruptible-eval/interruptible-eval (interruptible_eval.clj:155)
+nrepl.middleware.session/session-exec (session.clj:190)
+nrepl.middleware.session/session-exec (session.clj:189)
+java.lang.Thread/run (Thread.java:834)
+clj::dijkstra-cljs.viz=> 
+#'dijkstra-cljs.viz/m
+clj::dijkstra-cljs.viz=> 
+({} {} {:4 2} {:3 5, :2 5} {} {})
+clj::dijkstra-cljs.viz=> 
+()
+clj::dijkstra-cljs.viz=> 
+(:1 {} :2 {} :3 {:4 2} :4 {:3 5, :2 5} :5 {} :6 {})
+clj::dijkstra-cljs.viz=> 
+({} {} {:4 2} {:3 5, :2 5} {} {})
+clj::dijkstra-cljs.viz=> 
+(() () () () () ())
+clj::dijkstra-cljs.viz=> 
+({} {} {:4 2} {:3 5, :2 5} {} {})
+clj::dijkstra-cljs.viz=> 
+[{} {} {:4 2} {:3 5, :2 5} {} {}]
+clj::dijkstra-cljs.viz=> 
+(0 0 1 2 0 0)
+clj::dijkstra-cljs.viz=> 
+; Error printing return value (IllegalArgumentException) at clojure.lang.RT/seqFrom (RT.java:557).
+; Don't know how to create ISeq from: java.lang.Integer
+clojure.main/repl (main.clj:442)
+clojure.main/repl (main.clj:458)
+clojure.main/repl (main.clj:368)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:84)
+nrepl.middleware.interruptible-eval/evaluate (interruptible_eval.clj:56)
+nrepl.middleware.interruptible-eval/interruptible-eval (interruptible_eval.clj:155)
+nrepl.middleware.session/session-exec (session.clj:190)
+nrepl.middleware.session/session-exec (session.clj:189)
+java.lang.Thread/run (Thread.java:834)
+clj::dijkstra-cljs.viz=> 
+3
+clj::dijkstra-cljs.viz=> 
+#'dijkstra-cljs.viz/count-edges
+clj::dijkstra-cljs.viz=> 
+#'dijkstra-cljs.viz/rand-graph
+clj::dijkstra-cljs.viz=> 
+; Execution error (ClassCastException) at (REPL:1).
+; null
+
+clj::dijkstra-cljs.viz=> 
+#'dijkstra-cljs.viz/rand-graph
+clj::dijkstra-cljs.viz=> 
+; Execution error (ClassCastException) at (REPL:1).
+; null
+
+clj::dijkstra-cljs.viz=> 
+#'dijkstra-cljs.viz/rand-graph
+clj::dijkstra-cljs.viz=> 
+; Execution error (ClassCastException) at (REPL:1).
+; null
+
+clj::dijkstra-cljs.viz=> 
+#'dijkstra-cljs.viz/rand-graph
+clj::dijkstra-cljs.viz=> 
+{:1 {}, :2 {}, :3 {:6 6}, :4 {:3 2, :2 1}, :5 {:6 8, :1 2}, :6 {:4 1}}
+clj::dijkstra-cljs.viz=> 
+{:1 {:6 7, :4 3}, :2 {}, :3 {:5 2}, :4 {:6 3}, :5 {:1 3}, :6 {:3 3}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {}, :2 {:4 1}, :3 {:5 6, :1 5}, :4 {}, :5 {:6 3, :1 1, :2 2}, :6 {}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {:4 1}, :2 {}, :3 {:2 9, :5 3}, :4 {:3 7}, :5 {:1 4}, :6 {:5 5}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {:6 4}, :2 {:6 9, :5 5}, :3 {}, :4 {:2 9}, :5 {:1 3}, :6 {:3 5}}
+nil
+clj::dijkstra-cljs.viz=> 
+{:1 {:4 5}, :2 {:5 1, :4 9}, :3 {}, :4 {}, :5 {:4 7}, :6 {:5 7, :1 2}}
+nil
+clj::dijkstra-cljs.viz=> 

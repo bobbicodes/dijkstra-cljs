@@ -29,12 +29,17 @@
 
 (zipmap (nodes 6) (repeat {}))
 
-(defn add-random-node [graph]
+(defn add-random-node
+  "Outputs a graph with a random edge added to it.
+   Will not connect a node to itself, or a node
+   that would result in a bidirected edge."
+  [graph]
   (let [nodes (keys graph)
-        rand-node (fn [nodes] (first (shuffle nodes)))
+        rand-node (fn [nodes] (rand-nth nodes))
         node (rand-node nodes)
-        neighbors (remove #(= node %) nodes)]
-    (assoc-in graph [node (rand-nth (remove #(contains? (% graph) node) neighbors))]
+        neighbors (remove #(= node %) nodes)
+        unconnected (remove #(contains? (% graph) node) neighbors)]
+    (assoc-in graph [node (rand-nth unconnected)]
               (inc (rand-int 9)))))
 
 (add-random-node (zipmap (nodes 6) (repeat {})))
@@ -44,7 +49,22 @@
 ; So we need to create a list of all the nodes that contain
 ; the target node and remove them.
 
-{:1 {}, :2 {}, :3 {:4 2}, :4 {:3 5}, :5 {}, :6 {}}
+(def m {:1 {}, :2 {}, :3 {:4 2}, :4 {:3 5 :2 5}, :5 {}, :6 {}})
+
+(defn count-edges [graph]
+  (reduce + (for [node graph]
+              (count (val node)))))
+
+(defn rand-graph [n s]
+  (loop [graph (zipmap (nodes n) (repeat {}))]
+         (if (< (count-edges graph) s)
+           (recur (add-random-node graph))
+           graph)))
+
+(show! (rand-graph 6 6))
+
+(def disconnected-graph
+  {:1 {:4 5}, :2 {:5 1, :4 9}, :3 {}, :4 {}, :5 {:4 7}, :6 {:5 7, :1 2}})
 
 ; So, let's make a function that takes a node and a graph
 ; and outputs this list.
@@ -56,13 +76,12 @@
 
 (def m {:1 {}, :2 {}, :3 {:4 2}, :4 {}, :5 {}, :6 {}})
 
-(defn connected-to?
-  "Returns true if node if "
-  [node potential-node])
-
 (contains? (:3 m) :4)
 
 (filter #(contains? (% m) :4) (keys m))
+
+; Now similarly, we need to remove from the list of potential neighbors
+; the keys that are already present
 
 (->>
  (add-random-node (zipmap (nodes 6) (repeat {})))
@@ -73,3 +92,5 @@
  (show!))
 
 (show! g)
+
+(Math/sqrt .57)
