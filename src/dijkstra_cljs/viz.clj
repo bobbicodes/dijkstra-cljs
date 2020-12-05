@@ -34,10 +34,35 @@
         rand-node (fn [nodes] (first (shuffle nodes)))
         node (rand-node nodes)
         neighbors (remove #(= node %) nodes)]
-    (assoc-in graph [node (rand-nth neighbors)]
+    (assoc-in graph [node (rand-nth (remove #(contains? (% graph) node) neighbors))]
               (inc (rand-int 9)))))
 
-(remove #(= :2 %) (keys (zipmap (nodes 6) (repeat {}))))
+(add-random-node (zipmap (nodes 6) (repeat {})))
+
+; We want to reject {:3 5} being placed onto node :4
+; because node :3 already has :4 in it.
+; So we need to create a list of all the nodes that contain
+; the target node and remove them.
+
+{:1 {}, :2 {}, :3 {:4 2}, :4 {:3 5}, :5 {}, :6 {}}
+
+; So, let's make a function that takes a node and a graph
+; and outputs this list.
+
+; It will take:
+; {:1 {}, :2 {}, :3 {:4 2}, :4 {}, :5 {}, :6 {}}
+; and :4
+; And output :3
+
+(def m {:1 {}, :2 {}, :3 {:4 2}, :4 {}, :5 {}, :6 {}})
+
+(defn connected-to?
+  "Returns true if node if "
+  [node potential-node])
+
+(contains? (:3 m) :4)
+
+(filter #(contains? (% m) :4) (keys m))
 
 (->>
  (add-random-node (zipmap (nodes 6) (repeat {})))
