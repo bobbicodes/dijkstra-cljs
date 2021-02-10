@@ -52,17 +52,22 @@
 (comment
   (rand-edges (nodes 6)))
 
-(defn assign-weights [edges n]
+(defn assign-weights [edges]
   (zipmap
    edges
-   (repeatedly #(inc (rand-int n)) 9)))
+   (repeatedly #(max 1 (rand-int 6)))))
 
 (defn rand-graph [n s]
   (zipmap
    (nodes n)
    (map assign-weights (repeatedly n #(rand-edges (nodes n))))))
 
-;(rand-graph 6 5)
+(comment
+  (nodes 6)
+  (rand-edges (nodes 6))
+  (assign-weights (first  (repeatedly 6 #(rand-edges (nodes 6)))))
+  (map assign-weights (repeatedly 6 #(rand-edges (nodes 6))))
+  (rand-graph 6 5))
 
 (defonce graph (r/atom computerphile))
 (defonce starting-node (r/atom :s))
@@ -127,12 +132,12 @@
         (init-graph! @graph @starting-node))}
      "Reset"]
     [:p (str "Step " @step)]
-    #_[:button
+    [:button
      {:on-click
       (fn step-click [e]
         (swap! graph (rand-graph @rand-nodes @rand-nodes)))}
      "Random graph"]
-;[rand-nodes-input]
+[rand-nodes-input]
     ]])
 
 (defn render []
